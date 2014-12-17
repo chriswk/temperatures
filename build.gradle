@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springbootVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE")
     }
 }
 apply plugin: 'java'
@@ -24,8 +24,13 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
     compile "org.springframework.boot:spring-boot-starter-actuator:${springbootVersion}"
     compile "org.springframework.boot:spring-boot-starter-log4j2:${springbootVersion}"
-    compile "org.springframework.boot:spring-boot-starter-tomcat:${springbootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-undertow:${springbootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-websocket:${springbootVersion}"
     compile "com.netflix.hystrix:hystrix-core:${hystrixVersion}"
     compile "io.reactivex:rxjava:${rxVersion}"
     testCompile "junit:junit:4.11"
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = 2.2
 }
