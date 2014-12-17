@@ -17,10 +17,15 @@ repositories {
     jcenter()
     mavenLocal()
 }
-
+configurations {
+    all*.exclude group:'org.springframework.boot', module: 'spring-boot-logging'
+    all*.exclude group:'ch.qos.logback', module: 'logback-classic'
+    all*.exclude group:'ch.qos.logback', module: 'logback-core'
+}
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile "org.apache.logging:log4j-api:${log4jVersion}"
+    compile "org.apache.logging.log4j:log4j-api:${log4jVersion}"
+    compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"
     compile "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
     compile "org.springframework.boot:spring-boot-starter-actuator:${springbootVersion}"
     compile "org.springframework.boot:spring-boot-starter-log4j2:${springbootVersion}"
