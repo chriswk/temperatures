@@ -1,0 +1,1 @@
+Add ssl key as described here https://github.com/openhab/openhab/wiki/Netatmo-Binding
