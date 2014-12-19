@@ -8,6 +8,7 @@
     <Loggers>
         <Logger name="com.chriswk" level="trace" />
         <Logger name="org.springframework" level="warn" />
+        <Logger name="httpclient.wire" level="debug" />
         <Root level="debug">
             <AppenderRef ref="STDOUT" />
         </Root>
