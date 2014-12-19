@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
-public class Temperature {
+@ComponentScan("com.chriswk")
 
+public class TemperatureApp {
 
 }

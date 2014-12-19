@@ -6,7 +6,9 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="info">
+        <Logger name="com.chriswk" level="trace" />
+        <Logger name="org.springframework" level="warn" />
+        <Root level="debug">
             <AppenderRef ref="STDOUT" />
         </Root>
     </Loggers>
